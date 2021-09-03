@@ -1,0 +1,11 @@
+@mixin pad_pro{
+    @media(max-width:992px){
+      @content;
+    }
+}
+
+@mixin pad{
+    @media(max-width:768px){
+      @content;
+    }
+}

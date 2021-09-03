@@ -1,0 +1,122 @@
+$base-font-size:12px;
+$main-color:#fafaeb;
+$secondary-color:#00004d;
+$main-text-mobile-color:#fff;
+.bg-cover{
+    background-size: cover;
+    background-position: center center;
+}
+.main-bg-color{
+    background-color: $main-color;
+}
+.main-text-color{
+    color: $secondary-color;
+} 
+.main-text-mobile-color{
+    color: $main-text-mobile-color;
+}
+.font-bold{
+    font-weight: bold;
+}
+
+.innerHeight{
+    min-height: calc( 100vh - 72px );
+}
+
+.footer{
+height: 72px;
+}
+
+.nav-text{
+    &:hover{
+        color: $main-color;
+    }
+    @include pad{
+        text-align: center;
+    }
+}
+.logo{
+    font-size: 24px;
+    color: $main-color;
+}
+.choose{
+    overflow-y: scroll;
+    height: 680px;
+
+    @include pad {
+        height: 500px;
+    }
+}
+
+.card{
+    .card-text{
+        font-size:$base-font-size * 1.25 ;
+    }
+}
+
+.banner-picture{
+    padding-top: 50%;
+    @include pad{
+        padding-top: 60%;
+    }
+}
+
+.card-img{
+    padding-top: 50%;
+    position: relative;
+    @include pad{
+        padding-top: 60%;
+    }
+    .card-img-name{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: rgba(0,0,0,0.6);
+        transition:all .3s ease-in-out;
+            &:hover{
+                cursor:pointer;
+                background-color: rgba(0,0,0,0.1);
+                transition:all .3s ease-in-out;
+            }
+            .text-link{
+                color: $main-text-mobile-color;
+                font-size: 24px;
+                text-decoration: none;
+            }
+    }
+}
+
+.text-pc-link{
+    color: $secondary-color;
+    font-size: 32px;
+    text-decoration: none;
+    @include pad_pro{
+        font-size: 26px;
+    }
+}
+
+.nav-link{
+    position: relative;
+    color: $main-color;
+    transition: 0.25s linear;
+    &::before{
+      content: "";
+      width: 0%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      border-bottom: 2px solid $main-color;
+      top: 0;
+      left: 0;
+      transition: all .3s ease;
+      }
+    &:hover {
+      color:$main-color;
+      &::before {
+        width: 100%;
+      }
+    }
+  }
