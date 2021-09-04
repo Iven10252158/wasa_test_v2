@@ -36,7 +36,7 @@ height: 72px;
     }
 }
 .logo{
-    font-size: 24px;
+    font-size: $base-font-size * 2;
     color: $main-color;
 }
 .choose{
@@ -83,7 +83,7 @@ height: 72px;
             }
             .text-link{
                 color: $main-text-mobile-color;
-                font-size: 24px;
+                font-size: $base-font-size * 2;
                 text-decoration: none;
             }
     }
@@ -91,10 +91,10 @@ height: 72px;
 
 .text-pc-link{
     color: $secondary-color;
-    font-size: 32px;
+    font-size: $base-font-size * 2.5;
     text-decoration: none;
     @include pad_pro{
-        font-size: 26px;
+        font-size: $base-font-size * 2;
     }
 }
 
